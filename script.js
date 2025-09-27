@@ -3,18 +3,18 @@
 // // Elements
 // const sidebar = document.getElementById('sidebar');
 // const overlay = document.getElementById('overlay');
-// const openBtn = document.getElementById('openSidebar');  // corrected
-// const closeBtn = document.getElementById('closeSidebar'); // corrected
+// const openBtn = document.getElementById('openSidebar');  
+// const closeBtn = document.getElementById('closeSidebar');
 // const body = document.body;
 
 // // Accordion (Jeans)
-// const jeansTrigger = document.getElementById('jeansMenu'); // corrected
-// const jeansPanel = document.getElementById('jeansSubmenu'); // corrected
+// const jeansTrigger = document.getElementById('jeansMenu');
+// const jeansPanel = document.getElementById('jeansSubmenu'); 
 
 // // Modal (newsletter)
 // const modal = document.getElementById('newsletterModal');
-// const openModalBtns = [document.getElementById('newsletterBtn')]; // corrected
-// const modalCloseBtn = modal ? modal.querySelector('.close-modal') : null; // corrected
+// const openModalBtns = [document.getElementById('newsletterBtn')]; 
+// const modalCloseBtn = modal ? modal.querySelector('.close-modal') : null; 
 
 
 //   // Helpers

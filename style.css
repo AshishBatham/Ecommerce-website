@@ -1,5 +1,4 @@
-/* ---------- Base Styles ---------- */
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,7 +25,7 @@ img {
   display: block;
 }
 
-/* ---------- Buttons ---------- */
+/*  Buttons  */
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -47,7 +46,7 @@ img {
   margin-left: 5px;
 }
 
-/* ---------- Sidebar ---------- */
+/*  Sidebar  */
 .sidebar {
   width: 250px;
   position: fixed; 
@@ -60,7 +59,7 @@ img {
   z-index: 1000;
 }
 
-/* Shift main content when sidebar is visible on desktop */
+
 
 
 .sidebar-header {
@@ -112,7 +111,7 @@ img {
   left: 0;
 }
 
-/* ---------- Overlay ---------- */
+/* - Overlay */
 .overlay {
   position: fixed;
   display: none;
@@ -127,7 +126,7 @@ img {
 .overlay.active {
   display: block;
 }
-/* ---------- Navbar ---------- */
+/* Navbar  */
 .topbar {
   position: fixed;
   top: 0;
@@ -228,7 +227,7 @@ img {
   }
 }
 
-/* ---------- Page Header ---------- */
+/*  Page Header  */
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -247,7 +246,7 @@ img {
   cursor: pointer;
 }
 
-/* ---------- Hero Section ---------- */
+/*  Hero Section  */
 .hero {
   position: relative;
   width: 100%;
@@ -301,7 +300,7 @@ img {
   
 }
 
-/* ---------- Responsive ---------- */
+/*  Responsive  */
 @media screen and (max-width: 768px) {
   .hero {
     height: 400px;
@@ -322,7 +321,7 @@ img {
   }
 }
 
-/* ---------- Product Grid ---------- */
+/*  Product Grid  */
 .product-overview {
   padding: 15px 20px;
   font-size: 16px;
@@ -392,7 +391,7 @@ img {
   color: red;
 }
 
-/* ---------- Subscribe Section ---------- */
+/* Subscribe Section */
 .subscribe-section {
   text-align: center;
   padding: 30px 20px;
@@ -411,7 +410,7 @@ img {
   margin-left: 10px;
 }
 
-/* ---------- Footer ---------- */
+/*  Footer  */
 .site-footer {
   background-color: #222;
   color: #fff;
@@ -452,7 +451,7 @@ img {
   margin-right: 10px;
 }
 
-/* ---------- Modal ---------- */
+/*  Modal */
 .modal {
   display: none;
   position: fixed;
@@ -489,40 +488,40 @@ img {
   font-size: 24px;
 }
 
-/* ---------- Responsive ---------- */
+
 @media screen and (max-width: 900px) {
   .product-column {
     flex: 1 1 calc(50% - 15px);
   }
 }
-/* ---------- Sidebar Desktop Always Visible ---------- */
+
 @media screen and (min-width: 900px) {
   .main-content{
     margin-left: 250px;
   }
   .sidebar {
-    left: 0;          /* Always visible */
-    box-shadow: none; /* Optional: remove shadow on desktop */
+    left: 0;          
+    box-shadow: none; 
   }
 
   .overlay {
-    display: none;    /* Overlay not needed on desktop */
+    display: none;  
   }
 
   .topbar .hamburger-btn {
-    display: none;    /* Hide hamburger on desktop */
+    display: none;    
   }
 
 }
 
-/* ---------- Sidebar for Mobile ---------- */
+
 @media screen and (max-width: 899px) {
   .sidebar {
-    left: -250px;      /* Hidden initially */
+    left: -250px; 
   }
 
   .sidebar.open {
-    left: 0;           /* Slide in when open */
+    left: 0;     
   }
 }
 
