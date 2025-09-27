@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thrift-Flip Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-content">
+
+  <!-- Sidebar/menu -->
+  <nav class="sidebar" id="sidebarMenu">
+    <div class="sidebar-header">
+      <i class="close-btn fa fa-remove" onclick="closeSidebar()"></i>
+      <h3 class="sidebar-title">The Thrift-Flip Store</h3>
+    </div>
+    <div class="sidebar-links">
+      <a href="#" class="sidebar-item">Shirts</a>
+      <a href="#" class="sidebar-item">Dresses</a>
+      <a href="javascript:void(0)" class="sidebar-item accordion-btn" id="jeansBtn" onclick="toggleAccordion()">Jeans <i
+          class="fa fa-caret-down"></i></a>
+      <div id="jeansAccordion" class="accordion-content">
+        <a href="#" class="accordion-item"><i class="fa fa-caret-right"></i> Skinny</a>
+        <a href="#" class="accordion-item">Relaxed</a>
+        <a href="#" class="accordion-item">Bootcut</a>
+        <a href="#" class="accordion-item">Straight</a>
+      </div>
+      <a href="#" class="sidebar-item">Jackets</a>
+      <a href="#" class="sidebar-item">Gymwear</a>
+      <a href="#" class="sidebar-item">Blazers</a>
+      <a href="#" class="sidebar-item">Shoes</a>
+    </div>
+    <div class="sidebar-bottom">
+      <a href="#footer" class="sidebar-item">Contact</a>
+      <a href="javascript:void(0)" class="sidebar-item" onclick="showNewsletter()">Newsletter</a>
+      <a href="#footer" class="sidebar-item">Subscribe</a>
+    </div>
+  </nav>
+
+  <!-- Top menu for small screens -->
+  <header class="topbar">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Company Logo" class="logo" />
+      <span class="brand-name">ThriftFlip</span>
+    </div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="hamburger-btn" onclick="toggleSidebar()">
+        &#9776;
+      </button>
+
+      <div class="profile-dropdown">
+        <img src="images/user.png" alt="Profile" class="profile-icon">
+        <div class="dropdown-menu">
+          <p>Hi, User11</p>
+          <button onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Overlay -->
+  <div class="overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <!-- Main content -->
+  <main class="main-content">
+
+    <!-- Page header -->
+    <header class="page-header">
+      <p class="page-title">Jeans</p>
+      <p class="page-icons">
+        <i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-search"></i>
+      </p>
+    </header>
+
+    <!-- Image banner -->
+    <section class="hero">
+      <img src="images/1.jpg" alt="Main Banner" class="hero-img">
+      <div class="hero-text">
+        <h1>Welcome to ThriftFlip</h1>
+        <p>Discover amazing deals and unique finds!</p>
+        <a href="#shop" class="btn">Shop Now</a>
+      </div>
+    </section>
+
+
+    <section class="product-overview">
+      <p>8 items</p>
+    </section>
+
+    <!-- Product grid -->
+    <section class="product-grid">
+      <div class="product-column">
+        <div class="product-card">
+          <img src="images/2.jpg" alt="Ripped Skinny Jeans">
+          <p>Ripped Skinny Jeans<br><b>Rs. 2400</b></p>
+        </div>
+        <div class="product-card">
+          <img src="images/3.jpg" alt="Mega Ripped Jeans">
+          <p>Mega Ripped Jeans<br><b>Rs. 1900</b></p>
+        </div>
+      </div>
+
+      <div class="product-column">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/4.jpg" alt="Mega Ripped Jeans">
+            <span class="tag new">New</span>
+            <div class="overlay-hover">
+              <button class="btn buy-btn">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Mega Ripped Jeans<br><b>Rs. 1999</b></p>
+        </div>
+        <div class="product-card">
+          <img src="images/5.jpg" alt="Washed Skinny Jeans">
+          <p>Washed Skinny Jeans<br><b>Rs. 2500</b></p>
+        </div>
+      </div>
+
+      <div class="product-column">
+        <div class="product-card">
+          <img src="images/6.jpg" alt="Washed Skinny Jeans">
+          <p>Washed Skinny Jeans<br><b>Rs. 2000</b></p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/7.jpg" alt="Vintage Skinny Jeans">
+            <span class="tag sale">Sale</span>
+            <div class="overlay-hover">
+              <button class="btn buy-btn">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Vintage Skinny Jeans<br><b class="price-red">Rs. 1499</b></p>
+        </div>
+      </div>
+
+      <div class="product-column">
+        <div class="product-card">
+          <img src="images/8.jpg" alt="Vintage Skinny Jeans">
+          <p>Vintage Skinny Jeans<br><b>Rs. 1500</b></p>
+        </div>
+        <div class="product-card">
+          <img src="images/9.jpg" alt="Ripped Skinny Jeans">
+          <p>Ripped Skinny Jeans<br><b>Rs. 2499</b></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe section -->
+    <section class="subscribe-section">
+      <h2>Subscribe</h2>
+      <p>To get special offers and VIP treatment:</p>
+      <input type="text" placeholder="Enter e-mail" class="subscribe-input">
+      <button class="btn subscribe-btn">Subscribe</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+      <div class="footer-columns">
+        <div class="footer-column contact">
+          <h4>Contact</h4>
+          <p>Questions? Go ahead.</p>
+          <form action="https://sudeep-portfolio.netlify.app/" target="_blank">
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="text" name="Email" placeholder="Email" required>
+            <input type="text" name="Subject" placeholder="Subject" required>
+            <input type="text" name="Message" placeholder="Message" required>
+            <button type="submit" class="btn footer-btn">Send</button>
+          </form>
+        </div>
+
+        <div class="footer-column about">
+          <h4>About</h4>
+          <p><a href="https://github.com/AshishBatham">About us</a></p>
+          <p><a href="https://github.com/AshishBatham">Support</a></p>
+          <p><a href="https://github.com/AshishBatham">We're hiring</a></p>
+          <p><a href="https://github.com/AshishBatham">Find store</a></p>
+          <p><a href="https://github.com/AshishBatham">Shipment</a></p>
+          <p><a href="https://github.com/AshishBatham">Payment</a></p>
+          <p><a href="https://github.com/AshishBatham">Gift card</a></p>
+          <p><a href="https://github.com/AshishBatham">Return</a></p>
+          <p><a href="https://github.com/AshishBatham">Help</a></p>
+        </div>
+
+        <div class="footer-column info">
+          <h4>The Thrift-Flip-Store</h4>
+          <p><i class="fa fa-map-marker"></i> India, Uttar Pradesh</p>
+          <p><i class="fa fa-phone"></i> +91 123-456-7890</p>
+          <p><i class="fa fa-envelope"></i> ashish8957batham@gmail.com</p>
+          <h4>We accept</h4>
+          <p><i class="fa fa-cc-amex"></i> G-pay</p>
+          <p><i class="fa fa-credit-card"></i> Credit Card</p>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-facebook-official"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-snapchat"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">Powered by <a href="https://github.com/AshishBatham">Ashish Batham/github</a></div>
+    </footer>
+
+  </main>
+
+  <!-- Newsletter Modal -->
+  <div id="newsletter" class="modal">
+    <div class="modal-content">
+      <div class="modal-container">
+        <i class="fa fa-remove close-btn" onclick="hideNewsletter()"></i>
+        <h2>NEWSLETTER</h2>
+        <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+        <input type="text" placeholder="Enter e-mail">
+        <button class="btn subscribe-btn" onclick="hideNewsletter()">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
